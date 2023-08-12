@@ -1,0 +1,135 @@
+/* Estilos gerais */
+body.multi-theme {
+    background-color: #1d1d1d;
+    color: #dcdcdc;
+    font-family: 'Cinzel', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+/* Estilo do cabeçalho */
+.multi-theme-heading {
+    color: #e1b382;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+/* Estilo do subtítulo */
+.multi-theme-subheading {
+    color: #e1b382;
+    font-size: 24px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-family: 'Cinzel', serif;
+}
+
+/* Estilo para campos de entrada e botões */
+input[type="text"],
+input[type="number"],
+select,
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #e1b382;
+    background-color: #2e2e2e;
+    color: #dcdcdc;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #e1b382;
+    color: #1d1d1d;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #f2c26e;
+}
+
+/* Estilo para exibição do resultado do dado */
+#diceResultSpan {
+    font-weight: bold;
+}
+
+/* Estilo para campos de entrada inválidos */
+.error {
+    border: 1px solid #ff0000;
+}
+
+.error-message {
+    color: #ff0000;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Estilo para detalhes do personagem */
+.character-details {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Estilos para o elemento de imagem personalizado */
+#picture__input {
+    display: none;
+}
+
+.picture {
+    width: 800px;
+    height: 1000px;
+    background: #222 url('steampunk_background.jpg') no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    border: 2px dashed currentcolor;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    transition: color 300ms ease-in-out, background 300ms ease-in-out;
+    outline: none;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.picture:hover {
+    color: #777;
+    background: #333;
+}
+
+.picture:active {
+    border-color: #e1b382;
+    color: #e1b382;
+    background: #444;
+}
+
+.picture:focus {
+    color: #777;
+    background: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.picture__img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
