@@ -8,7 +8,7 @@ body.multi-theme {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 960px;
     margin: 0 auto;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.9);
@@ -94,8 +94,8 @@ button:hover {
 }
 
 .picture {
-    width: 800px;
-    height: 1000px;
+    width: 960px;
+    height: 1568px;
     background: #222 url('steampunk_background.jpg') no-repeat center;
     background-size: cover;
     display: flex;
