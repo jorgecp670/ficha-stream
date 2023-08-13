@@ -1,138 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tela de Login e Cadastro</title>
+    <title>Login</title>
+    <!-- Inclua os scripts do Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    
+    <!-- Configuração do Firebase -->
+    <script>
+        const firebaseConfig = {
+        apiKey: "AIzaSyAxH5o_IV9WZn72FyYUeyM4JbF4ls4cvqw",
+        authDomain: "ficha-teste-ad5fa.firebaseapp.com",
+        projectId: "ficha-teste-ad5fa",
+        storageBucket: "ficha-teste-ad5fa.appspot.com",
+        messagingSenderId: "890260354540",
+        appId: "1:890260354540:web:7b64a2205de5a347fc3cc9"
+      };
   
-  <style>
-   body {
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-image: linear-gradient(to right, #1a1a1a, #4d4d4d, #1a1a1a);
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    .login-container, .signup-container {
-      background-color: rgba(255, 255, 255, 0.9);
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      text-align: center;
-      max-width: 400px;
-    }
-
-    .form-title {
-      margin-bottom: 20px;
-      font-size: 24px;
-      color: #4d4d4d;
-    }
-
-    input {
-      display: block;
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    .submit-button {
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      padding: 10px 20px;
-      cursor: pointer;
-      font-weight: 700;
-      transition: background-color 0.3s;
-    }
-
-    .submit-button:hover {
-      background-color: #0056b3;
-    }
-
-    .toggle-btn {
-      margin-top: 10px;
-      cursor: pointer;
-      color: #007bff;
-    }
-  </style>
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
 </head>
 <body>
-  <div class="login-container">
+    <h1>Login</h1>
     <form id="login-form">
-      <input type="text" placeholder="Login" id="login">
-      <input type="password" placeholder="Senha" id="senha">
-      <input type="submit" value="Entrar" onclick="logar(); return false">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required><br>
+        <button type="submit">Login</button>
     </form>
-    <p class="toggle-btn" onclick="toggleForm('signup')">Cadastrar</p>
-  </div>
 
-  <div class="signup-container">
-    <form id="signup-form" style="display: none;">
-      <input type="text" placeholder="Nome" id="nome">
-      <input type="text" placeholder="Email" id="email">
-      <input type="password" placeholder="Senha" id="novaSenha">
-      <input type="submit" value="Cadastrar" onclick="cadastrar(); return false">
-    </form>
-    <p class="toggle-btn" onclick="toggleForm('login')">Já tem uma conta? Entrar</p>
-  </div>
+    <!-- Manipulação do formulário -->
+    <script>
+        const loginForm = document.getElementById('login-form');
 
-  <script>
-    function logar() {
-      const username = document.getElementById('login').value;
-      const password = document.getElementById('senha').value;
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
 
-      if (username === 'user' && password === 'password') {
-        alert('Login bem-sucedido!');
-        location.href = "ficha.html"; // Redireciona para a página após o login
-      } else {
-        alert('Credenciais inválidas. Tente novamente.');
-      }
-    }
-    function cadastrar() {
-  const nome = document.getElementById('nome').value;
-  const email = document.getElementById('email').value;
-  const novaSenha = document.getElementById('novaSenha').value;
+            const email = loginForm.email.value;
+            const password = loginForm.password.value;
 
-  // Valide os campos (por exemplo, verifique se não estão vazios)
-
-  // Simulação: Armazene os dados em um objeto (poderia ser um banco de dados real)
-  const novoUsuario = {
-    nome: nome,
-    email: email,
-    senha: novaSenha
-  };
-
-  // Simulação: Adicione o novo usuário a uma lista de usuários cadastrados
-  const usuariosCadastrados = []; // Mantenha uma lista ou banco de dados de usuários
-  usuariosCadastrados.push(novoUsuario);
-
-  // Limpe o formulário de cadastro
-  document.getElementById('nome').value = '';
-  document.getElementById('email').value = '';
-  document.getElementById('novaSenha').value = '';
-
-  alert('Cadastro realizado com sucesso! Agora você pode fazer login.');
-}
-
-
-    function toggleForm(formType) {
-      const loginForm = document.getElementById('login-form');
-      const signupForm = document.getElementById('signup-form');
-
-      if (formType === 'signup') {
-        loginForm.style.display = 'none';
-        signupForm.style.display = 'block';
-      } else if (formType === 'login') {
-        loginForm.style.display = 'block';
-        signupForm.style.display = 'none';
-      }
-    }
-  </script>
+            firebase.auth().signInWithEmailAndPassword(email, password)
+                .then((userCredential) => {
+                  location.href = "ficha.html"; // Redireciona para a página após o login
+                    console.log('Login bem-sucedido!', userCredential);
+                })
+                .catch((error) => {
+                    console.error('Erro no login:', error.message);
+                });
+        });
+    </script>
 </body>
 </html>
+
+
+      
