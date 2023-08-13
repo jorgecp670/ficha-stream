@@ -1,40 +1,31 @@
 /* Estilos gerais */
-body.multi-theme {
-    background-color: #1d1d1d;
-    color: #dcdcdc;
-    font-family: 'Cinzel', serif;
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f5f5f5;
 }
 
 .container {
-    max-width: 960px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #fff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
 }
 
-/* Estilo do cabeçalho */
-.multi-theme-heading {
-    color: #e1b382;
-    font-size: 36px;
+h1 {
     text-align: center;
     margin-bottom: 20px;
-    font-family: 'Cinzel Decorative', cursive;
 }
 
-/* Estilo do subtítulo */
-.multi-theme-subheading {
-    color: #e1b382;
-    font-size: 24px;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    font-family: 'Cinzel', serif;
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Estilo para campos de entrada e botões */
 input[type="text"],
 input[type="number"],
 select,
@@ -43,23 +34,37 @@ button {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
-    border: 2px solid #e1b382;
-    background-color: #2e2e2e;
-    color: #dcdcdc;
-    border-radius: 8px;
-    font-family: 'Roboto', sans-serif;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    border-radius: 4px;
     font-size: 16px;
 }
 
 button {
     cursor: pointer;
-    background-color: #e1b382;
-    color: #1d1d1d;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
     transition: background-color 0.3s ease-in-out;
 }
 
 button:hover {
-    background-color: #f2c26e;
+    background-color: #0056b3;
+}
+
+#successMessage, #errorMessage {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#error {
+    color: red;
+}
+
+#success {
+    color: green;
 }
 
 /* Estilo para exibição do resultado do dado */

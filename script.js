@@ -85,3 +85,46 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+document.addEventListener('DOMContentLoaded', function () {
+    const characterForm = document.getElementById('characterForm');
+    const successMessage = document.getElementById('successMessage');
+    const errorMessage = document.getElementById('errorMessage');
+    
+    // Configuração do Firebase
+    const firebaseConfig = {
+        apiKey: "AIzaSyAxH5o_IV9WZn72FyYUeyM4JbF4ls4cvqw",
+        authDomain: "ficha-teste-ad5fa.firebaseapp.com",
+        projectId: "ficha-teste-ad5fa",
+        storageBucket: "ficha-teste-ad5fa.appspot.com",
+        messagingSenderId: "890260354540",
+        appId: "1:890260354540:web:7b64a2205de5a347fc3cc9"
+      };
+  
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    
+    // Evento de envio do formulário
+    characterForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        
+        // Obtenha os dados do formulário (substitua pelos seus campos)
+        const formData = {
+            name: document.getElementById('name').value,
+            characterClass: document.getElementById('characterClass').value,
+            // ... outros campos da ficha de personagem
+        };
+        
+        // Salvar dados no Firebase
+        db.collection('characters').add(formData)
+            .then(() => {
+                successMessage.style.display = 'block';
+                errorMessage.style.display = 'none';
+            })
+            .catch(error => {
+                console.error(error);
+                successMessage.style.display = 'none';
+                errorMessage.style.display = 'block';
+            });
+    });
+});
