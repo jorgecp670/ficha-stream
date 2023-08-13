@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de Personagem Automatizada</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ficha de Personagem</h1>
+        
+        <!-- Adicione o input para upload de imagem do personagem -->
+        <label class="picture" for="picture__input" tabIndex="0">
+            <span class="picture__image"></span>
+        </label>
+          
+        <input type="file" name="picture__input" id="picture__input">
+    
+        <form id="characterForm">
+            <h2>Dados do Personagem</h2>
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name"><br>
+
+            <label for="characterClass">Classe:</label>
+            <input type="text" id="characterClass" name="characterClass"><br>
+
+            <label for="region">Região (Origem):</label>
+            <input type="text" id="region" name="region"><br>
+
+            <label for="faith">Fé:</label>
+            <input type="text" id="faith" name="faith"><br>
+
+            <label for="background">Antecedente:</label>
+            <input type="text" id="background" name="background"><br>
+
+            <label for="ageReal">Idade (real):</label>
+            <input type="number" id="ageReal" name="ageReal"><br>
+
+            <label for="ageApparent">Idade (aparente):</label>
+            <input type="number" id="ageApparent" name="ageApparent"><br>
+
+            <h2>Atributos</h2>
+            <div class="attributes">
+                <div class="attribute">
+                    <label for="strength">FORÇA:</label>
+                    <input type="number" id="strength" name="strength">
+                </div>
+
+                <div class="attribute">
+                    <label for="agility">AGILIDADE:</label>
+                    <input type="number" id="agility" name="agility">
+                </div>
+
+                <div class="attribute">
+                    <label for="wisdom">SABEDORIA:</label>
+                    <input type="number" id="wisdom" name="wisdom">
+                </div>
+
+                <div class="attribute">
+                    <label for="intelligence">INTELIGÊNCIA:</label>
+                    <input type="number" id="intelligence" name="intelligence">
+                </div>
+
+                <div class="attribute">
+                    <label for="luck">SORTE:</label>
+                    <input type="number" id="luck" name="luck">
+                </div>
+
+                <div class="attribute">
+                    <label for="adaptability">ADAPTABILIDADE:</label>
+                    <input type="number" id="adaptability" name="adaptability">
+                </div>
+
+                <div class="attribute">
+                    <label for="charisma">CARISMA:</label>
+                    <input type="number" id="charisma" name="charisma">
+                </div>
+            </div>
+
+            <h2>Habilidades</h2>
+            <div class="abilities">
+                <div class="ability">
+                    <label for="ability1">Habilidade 1:</label>
+                    <input type="text" id="ability1" name="ability1">
+                </div>
+
+                <div class="ability">
+                    <label for="ability2">Habilidade 2:</label>
+                    <input type="text" id="ability2" name="ability2">
+                </div>
+
+                <div class="ability">
+                    <label for="ability3">Habilidade 3:</label>
+                    <input type="text" id="ability3" name="ability3">
+                </div>
+                
+                <div class="ability">
+                    <label for="ability4">Habilidade 4:</label>
+                    <input type="text" id="ability4" name="ability4">
+                </div>
+            </div>
+
+            <h2>Perícias</h2>
+            <div class="skills">
+                <div class="skill">
+                    <label for="skill1">Perícia 1:</label>
+                    <input type="text" id="skill1" name="skill1">
+                </div>
+
+                <div class="skill">
+                    <label for="skill2">Perícia 2:</label>
+                    <input type="text" id="skill2" name="skill2">
+                </div>
+
+                <div class="skill">
+                    <label for="skill3">Perícia 3:</label>
+                    <input type="text" id="skill3" name="skill3">
+                </div>
+            
+                <div class="skill">
+                    <label for="skill4">Perícia 4:</label>
+                    <input type="text" id="skill4" name="skill4">
+                </div>
+         
+                <div class="skill">
+                    <label for="skill5">Perícia 5:</label>
+                    <input type="text" id="skill5" name="skill5">
+                </div>
+            
+                <div class="skill">
+                    <label for="skill6">Perícia 6:</label>
+                    <input type="text" id="skill6" name="skill6">
+                </div>
+            
+                <div class="skill">
+                    <label for="skill7">Perícia 7:</label>
+                    <input type="text" id="skill7" name="skill7">
+                </div>
+            
+                <div class="skill">
+                    <label for="skill8">Perícia 8:</label>
+                    <input type="text" id="skill8" name="skill8">
+                </div>
+            
+                <div class="skill">
+                    <label for="skill9">Perícia 9:</label>
+                    <input type="text" id="skill9" name="skill9">
+                </div>
+           
+                <div class="skill">
+                    <label for="skill10">Perícia 10:</label>
+                    <input type="text" id="skill10" name="skill10">
+                </div>
+            </div>
+
+            <h2>Itens</h2>
+            <div class="items">
+                <h3>Consumíveis:</h3>
+                <div class="item">
+                    <label for="consumable1">Consumível 1:</label>
+                    <input type="text" id="consumable1" name="consumable1">
+                </div>
+
+                <div class="item">
+                    <label for="consumable2">Consumível 2:</label>
+                    <input type="text" id="consumable2" name="consumable2">
+                </div>
+
+                <div class="item">
+                    <label for="consumable3">Consumível 3:</label>
+                    <input type="text" id="consumable3" name="consumable3">
+                </div>
+            </div>
+
+            <div class="items">
+                <h3>Armadura:</h3>
+                <div class="item">
+                    <label for="armorName">Nome da Armadura:</label>
+                    <input type="text" id="armorName" name="armorName">
+                </div>
+
+                <div class="item">
+                    <label for="armorDefense">Defesa Proporcionada:</label>
+                    <input type="number" id="armorDefense" name="armorDefense" min="0">
+                </div>
+
+                <div class="item">
+                    <label for="armorResistance">Resistência:</label>
+                    <input type="text" id="armorResistance" name="armorResistance">
+                </div>
+
+                <div class="item">
+                    <label for="armorAbility1">Habilidade 1:</label>
+                    <input type="text" id="armorAbility1" name="armorAbility1">
+                </div>
+
+                <div class="item">
+                    <label for="armorAbility2">Habilidade 2:</label>
+                    <input type="text" id="armorAbility2" name="armorAbility2">
+                </div>
+
+                <div class="item">
+                    <label for="armorAbility3">Habilidade 3:</label>
+                    <input type="text" id="armorAbility3" name="armorAbility3">
+                </div>
+
+                <div class="item">
+                    <label for="armorDurability">Durabilidade:</label>
+                    <input type="text" id="armorDurability" name="armorDurability">
+                </div>
+            </div>
+
+            <div class="items">
+                <h3>Arma:</h3>
+                <div class="item">
+                    <label for="weaponName">Nome da Arma:</label>
+                    <input type="text" id="weaponName" name="weaponName">
+                </div>
+
+                <div class="item">
+                    <label for="weaponLevel">Nível:</label>
+                    <input type="number" id="weaponLevel" name="weaponLevel" min="0">
+                </div>
+
+                <div class="item">
+                    <label for="weaponAbility1">Habilidade 1:</label>
+                    <input type="text" id="weaponAbility1" name="weaponAbility1">
+                </div>
+
+                <div class="item">
+                    <label for="weaponAbility2">Habilidade 2:</label>
+                    <input type="text" id="weaponAbility2" name="weaponAbility2">
+                </div>
+
+                <div class="item">
+                    <label for="weaponAbility3">Habilidade 3:</label>
+                    <input type="text" id="weaponAbility3" name="weaponAbility3">
+                </div>
+
+                <div class="item">
+                    <label for="weaponDurability">Durabilidade:</label>
+                    <input type="text" id="weaponDurability" name="weaponDurability">
+                </div>
+
+                <div class="item">
+                    <label for="weaponDamage">Dano:</label>
+                    <input type="text" id="weaponDamage" name="weaponDamage">
+                </div>
+            </div>
+
+            <h2>Rolagem de Dados</h2>
+            <div class="dice">
+                <label for="diceQuantity">Quantidade:</label>
+                <input type="number" id="diceQuantity" min="1" value="1">
+            </div>
+
+            <div class="dice">
+                <label for="diceSides">Tipo de Dado:</label>
+                <select id="diceSides">
+                    <option value="4">d4</option>
+                    <option value="6">d6</option>
+                    <option value="8">d8</option>
+                    <option value="10">d10</option>
+                    <option value="12">d12</option>
+                    <option value="20">d20</option>
+                </select>
+            </div>
+
+            <div class="dice">
+                <button id="rollDiceButton">Rolar Dados</button>
+                <p>Resultado: <span id="diceResultSpan"></span></p>
+            </div>
+
+            <input type="submit" value="Criar Ficha">
+        </form>
+
+        <div id="characterSheet" style="display: none;">
+            <h2>Ficha de Personagem</h2>
+            <div id="characterDetails"></div>
+        </div>
+        <input type="submit" value="Salvar Ficha">
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+    <script src="script.js"></script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+  
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyAxH5o_IV9WZn72FyYUeyM4JbF4ls4cvqw",
+        authDomain: "ficha-teste-ad5fa.firebaseapp.com",
+        projectId: "ficha-teste-ad5fa",
+        storageBucket: "ficha-teste-ad5fa.appspot.com",
+        messagingSenderId: "890260354540",
+        appId: "1:890260354540:web:7b64a2205de5a347fc3cc9"
+      };
+  
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+  
+    <script>
+      var serviceWorkerVersion = '2792502507';
+      var scriptLoaded = false;
+      function loadMainDartJs() {
+        if (scriptLoaded) {
+          return;
+        }
+        scriptLoaded = true;
+        var scriptTag = document.createElement("script");
+        scriptTag.src = "main.dart.js";
+        scriptTag.type = "application/javascript";
+        document.body.append(scriptTag);
+      }
+  
+      if ("serviceWorker" in navigator) {
+        // Service workers are supported. Use them.
+        window.addEventListener("load", function () {
+          // Wait for registration to finish before dropping the <script> tag.
+          // Otherwise, the browser will load the script multiple times,
+          // potentially different versions.
+          var serviceWorkerUrl =
+            "flutter_service_worker.js?v=" + serviceWorkerVersion;
+          navigator.serviceWorker.register(serviceWorkerUrl).then((reg) => {
+            function waitForActivation(serviceWorker) {
+              serviceWorker.addEventListener("statechange", () => {
+                if (serviceWorker.state == "activated") {
+                  console.log("Installed new service worker.");
+                  loadMainDartJs();
+                }
+              });
+            }
+            if (!reg.active && (reg.installing || reg.waiting)) {
+              // No active web worker and we have installed or are installing
+              // one for the first time. Simply wait for it to activate.
+              waitForActivation(reg.installing ?? reg.waiting);
+            } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
+              // When the app updates the serviceWorkerVersion changes, so we
+              // need to ask the service worker to update.
+              console.log("New service worker available.");
+              reg.update();
+              waitForActivation(reg.installing);
+            } else {
+              // Existing service worker is still good.
+              console.log("Loading app from service worker.");
+              loadMainDartJs();
+            }
+          });
+  
+          // If service worker doesn't succeed in a reasonable amount of time,
+          // fallback to plaint <script> tag.
+          setTimeout(() => {
+            if (!scriptLoaded) {
+              console.warn(
+                "Failed to load app from service worker. Falling back to plain <script> tag."
+              );
+              loadMainDartJs();
+            }
+          }, 4000);
+        });
+      } else {
+        // Service workers not supported. Just drop the <script> tag.
+        loadMainDartJs();
+      }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+        
+        
+   
