@@ -2,6 +2,62 @@
 <html>
 <head>
     <title>Login</title>
+    <style>
+      body {
+         margin: 0;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         background-image: linear-gradient(to right, #1a1a1a, #4d4d4d, #1a1a1a);
+         font-family: 'Montserrat', sans-serif;
+       }
+   
+       .login-container, .signup-container {
+         background-color: rgba(255, 255, 255, 0.9);
+         padding: 20px;
+         border-radius: 15px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+         text-align: center;
+         max-width: 400px;
+       }
+   
+       .form-title {
+         margin-bottom: 20px;
+         font-size: 24px;
+         color: #4d4d4d;
+       }
+   
+       input {
+         display: block;
+         width: 100%;
+         padding: 10px;
+         margin: 10px 0;
+         border: 1px solid #ccc;
+         border-radius: 5px;
+       }
+   
+       .submit-button {
+         background-color: #007bff;
+         color: white;
+         border: none;
+         border-radius: 5px;
+         padding: 10px 20px;
+         cursor: pointer;
+         font-weight: 700;
+         transition: background-color 0.3s;
+       }
+   
+       .submit-button:hover {
+         background-color: #0056b3;
+       }
+   
+       .toggle-btn {
+         margin-top: 10px;
+         cursor: pointer;
+         color: #007bff;
+       }
+     </style>
     <!-- Inclua os scripts do Firebase -->
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
