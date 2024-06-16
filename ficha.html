@@ -1,80 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ficha de Personagem Automatizada</title>
     <link rel="stylesheet" href="styles.css">
-</head>
+    </head>
 <body>
     <div class="container">
         <h1>Ficha de Personagem - Sistema de Save</h1>
-        
+
         <!-- Adicione o input para upload de imagem do personagem -->
         <label class="picture" for="picture__input" tabIndex="0">
-            <span class="picture__image"></span>
+            <span class="picture__image">Clique para adicionar imagem</span>
         </label>
-          
         <input type="file" name="picture__input" id="picture__input">
-    
+
         <form id="characterForm">
             <h2>Dados do Personagem</h2>
             <label for="name">Nome:</label>
-            <input type="text" id="name" name="name"><br>
+            <input type="text" id="name" name="name" required>
 
             <label for="characterClass">Classe:</label>
-            <input type="text" id="characterClass" name="characterClass"><br>
+            <input type="text" id="characterClass" name="characterClass" required>
 
             <label for="region">Região (Origem):</label>
-            <input type="text" id="region" name="region"><br>
+            <input type="text" id="region" name="region" required>
 
             <label for="faith">Fé:</label>
-            <input type="text" id="faith" name="faith"><br>
+            <input type="text" id="faith" name="faith" required>
 
             <label for="background">Antecedente:</label>
-            <input type="text" id="background" name="background"><br>
+            <input type="text" id="background" name="background" required>
 
             <label for="ageReal">Idade (real):</label>
-            <input type="number" id="ageReal" name="ageReal"><br>
+            <input type="number" id="ageReal" name="ageReal" required>
 
             <label for="ageApparent">Idade (aparente):</label>
-            <input type="number" id="ageApparent" name="ageApparent"><br>
+            <input type="number" id="ageApparent" name="ageApparent" required>
 
             <h2>Atributos</h2>
             <div class="attributes">
                 <div class="attribute">
                     <label for="strength">FORÇA:</label>
-                    <input type="number" id="strength" name="strength">
+                    <input type="number" id="strength" name="strength" required>
                 </div>
-
                 <div class="attribute">
                     <label for="agility">AGILIDADE:</label>
-                    <input type="number" id="agility" name="agility">
+                    <input type="number" id="agility" name="agility" required>
                 </div>
-
                 <div class="attribute">
                     <label for="wisdom">SABEDORIA:</label>
-                    <input type="number" id="wisdom" name="wisdom">
+                    <input type="number" id="wisdom" name="wisdom" required>
                 </div>
-
                 <div class="attribute">
                     <label for="intelligence">INTELIGÊNCIA:</label>
-                    <input type="number" id="intelligence" name="intelligence">
+                    <input type="number" id="intelligence" name="intelligence" required>
                 </div>
-
                 <div class="attribute">
                     <label for="luck">SORTE:</label>
-                    <input type="number" id="luck" name="luck">
+                    <input type="number" id="luck" name="luck" required>
                 </div>
-
                 <div class="attribute">
                     <label for="adaptability">ADAPTABILIDADE:</label>
-                    <input type="number" id="adaptability" name="adaptability">
+                    <input type="number" id="adaptability" name="adaptability" required>
                 </div>
-
                 <div class="attribute">
                     <label for="charisma">CARISMA:</label>
-                    <input type="number" id="charisma" name="charisma">
+                    <input type="number" id="charisma" name="charisma" required>
                 </div>
             </div>
 
@@ -82,22 +75,19 @@
             <div class="abilities">
                 <div class="ability">
                     <label for="ability1">Habilidade 1:</label>
-                    <input type="text" id="ability1" name="ability1">
+                    <input type="text" id="ability1" name="ability1" required>
                 </div>
-
                 <div class="ability">
                     <label for="ability2">Habilidade 2:</label>
-                    <input type="text" id="ability2" name="ability2">
+                    <input type="text" id="ability2" name="ability2" required>
                 </div>
-
                 <div class="ability">
                     <label for="ability3">Habilidade 3:</label>
-                    <input type="text" id="ability3" name="ability3">
+                    <input type="text" id="ability3" name="ability3" required>
                 </div>
-                
                 <div class="ability">
                     <label for="ability4">Habilidade 4:</label>
-                    <input type="text" id="ability4" name="ability4">
+                    <input type="text" id="ability4" name="ability4" required>
                 </div>
             </div>
 
@@ -105,52 +95,43 @@
             <div class="skills">
                 <div class="skill">
                     <label for="skill1">Perícia 1:</label>
-                    <input type="text" id="skill1" name="skill1">
+                    <input type="text" id="skill1" name="skill1" required>
                 </div>
-
                 <div class="skill">
                     <label for="skill2">Perícia 2:</label>
-                    <input type="text" id="skill2" name="skill2">
+                    <input type="text" id="skill2" name="skill2" required>
                 </div>
-
                 <div class="skill">
                     <label for="skill3">Perícia 3:</label>
-                    <input type="text" id="skill3" name="skill3">
+                    <input type="text" id="skill3" name="skill3" required>
                 </div>
-            
                 <div class="skill">
                     <label for="skill4">Perícia 4:</label>
-                    <input type="text" id="skill4" name="skill4">
+                    <input type="text" id="skill4" name="skill4" required>
                 </div>
-         
                 <div class="skill">
                     <label for="skill5">Perícia 5:</label>
-                    <input type="text" id="skill5" name="skill5">
+                    <input type="text" id="skill5" name="skill5" required>
                 </div>
-            
                 <div class="skill">
                     <label for="skill6">Perícia 6:</label>
-                    <input type="text" id="skill6" name="skill6">
+                    <input type="text" id="skill6" name="skill6" required>
                 </div>
-            
                 <div class="skill">
                     <label for="skill7">Perícia 7:</label>
-                    <input type="text" id="skill7" name="skill7">
+                    <input type="text" id="skill7" name="skill7" required>
                 </div>
-            
                 <div class="skill">
                     <label for="skill8">Perícia 8:</label>
-                    <input type="text" id="skill8" name="skill8">
+                    <input type="text" id="skill8" name="skill8" required>
                 </div>
-            
                 <div class="skill">
                     <label for="skill9">Perícia 9:</label>
-                    <input type="text" id="skill9" name="skill9">
+                    <input type="text" id="skill9" name="skill9" required>
                 </div>
-           
                 <div class="skill">
                     <label for="skill10">Perícia 10:</label>
-                    <input type="text" id="skill10" name="skill10">
+                    <input type="text" id="skill10" name="skill10" required>
                 </div>
             </div>
 
@@ -159,152 +140,106 @@
                 <h3>Consumíveis:</h3>
                 <div class="item">
                     <label for="consumable1">Consumível 1:</label>
-                    <input type="text" id="consumable1" name="consumable1">
+                    <input type="text" id="consumable1" name="consumable1" required>
                 </div>
-
                 <div class="item">
                     <label for="consumable2">Consumível 2:</label>
-                    <input type="text" id="consumable2" name="consumable2">
+                    <input type="text" id="consumable2" name="consumable2" required>
                 </div>
 
+                <h3>Equipamentos:</h3>
                 <div class="item">
-                    <label for="consumable3">Consumível 3:</label>
-                    <input type="text" id="consumable3" name="consumable3">
+                    <label for="equipment1">Equipamento 1:</label>
+                    <input type="text" id="equipment1" name="equipment1" required>
+                </div>
+                <div class="item">
+                    <label for="equipment2">Equipamento 2:</label>
+                    <input type="text" id="equipment2" name="equipment2" required>
+                </div>
+                <div class="item">
+                    <label for="equipment3">Equipamento 3:</label>
+                    <input type="text" id="equipment3" name="equipment3" required>
+                </div>
+                <div class="item">
+                    <label for="equipment4">Equipamento 4:</label>
+                    <input type="text" id="equipment4" name="equipment4" required>
                 </div>
             </div>
 
-            <div class="items">
-                <h3>Armadura:</h3>
-                <div class="item">
-                    <label for="armorName">Nome da Armadura:</label>
-                    <input type="text" id="armorName" name="armorName">
-                </div>
-
-                <div class="item">
-                    <label for="armorDefense">Defesa Proporcionada:</label>
-                    <input type="number" id="armorDefense" name="armorDefense" min="0">
-                </div>
-
-                <div class="item">
-                    <label for="armorResistance">Resistência:</label>
-                    <input type="text" id="armorResistance" name="armorResistance">
-                </div>
-
-                <div class="item">
-                    <label for="armorAbility1">Habilidade 1:</label>
-                    <input type="text" id="armorAbility1" name="armorAbility1">
-                </div>
-
-                <div class="item">
-                    <label for="armorAbility2">Habilidade 2:</label>
-                    <input type="text" id="armorAbility2" name="armorAbility2">
-                </div>
-
-                <div class="item">
-                    <label for="armorAbility3">Habilidade 3:</label>
-                    <input type="text" id="armorAbility3" name="armorAbility3">
-                </div>
-
-                <div class="item">
-                    <label for="armorDurability">Durabilidade:</label>
-                    <input type="text" id="armorDurability" name="armorDurability">
-                </div>
-            </div>
-
-            <div class="items">
-                <h3>Arma:</h3>
-                <div class="item">
-                    <label for="weaponName">Nome da Arma:</label>
-                    <input type="text" id="weaponName" name="weaponName">
-                </div>
-
-                <div class="item">
-                    <label for="weaponLevel">Nível:</label>
-                    <input type="number" id="weaponLevel" name="weaponLevel" min="0">
-                </div>
-
-                <div class="item">
-                    <label for="weaponAbility1">Habilidade 1:</label>
-                    <input type="text" id="weaponAbility1" name="weaponAbility1">
-                </div>
-
-                <div class="item">
-                    <label for="weaponAbility2">Habilidade 2:</label>
-                    <input type="text" id="weaponAbility2" name="weaponAbility2">
-                </div>
-
-                <div class="item">
-                    <label for="weaponAbility3">Habilidade 3:</label>
-                    <input type="text" id="weaponAbility3" name="weaponAbility3">
-                </div>
-
-                <div class="item">
-                    <label for="weaponDurability">Durabilidade:</label>
-                    <input type="text" id="weaponDurability" name="weaponDurability">
-                </div>
-
-                <div class="item">
-                    <label for="weaponDamage">Dano:</label>
-                    <input type="text" id="weaponDamage" name="weaponDamage">
-                </div>
-            </div>
-
-            <h2>Rolagem de Dados</h2>
+            <h2>Dados</h2>
             <div class="dice">
-                <label for="diceQuantity">Quantidade:</label>
-                <input type="number" id="diceQuantity" min="1" value="1">
+                <button type="button" onclick="rollDice()">Rolar Dados</button>
+                <div id="diceResult"></div>
             </div>
 
-            <div class="dice">
-                <label for="diceSides">Tipo de Dado:</label>
-                <select id="diceSides">
-                    <option value="4">d4</option>
-                    <option value="6">d6</option>
-                    <option value="8">d8</option>
-                    <option value="10">d10</option>
-                    <option value="12">d12</option>
-                    <option value="20">d20</option>
-                </select>
-            </div>
-
-            <div class="dice">
-                <button id="rollDiceButton">Rolar Dados</button>
-                <p>Resultado: <span id="diceResultSpan"></span></p>
-            </div>
-
-            <input type="submit" value="Criar Ficha">
+            <button type="submit">Salvar Ficha</button>
         </form>
 
-        <div id="characterSheet" style="display: none;">
-            <h2>Ficha de Personagem</h2>
-            <div id="characterDetails"></div>
-        </div>
-        <input type="submit" value="Salvar Ficha">
-        </form>
-        <div id="successMessage" style="display: none;">Ficha salva com sucesso!</div>
-        <div id="errorMessage" style="display: none;">Erro ao salvar a ficha.</div>
+        <div id="successMessage">Ficha salva com sucesso!</div>
+        <div id="errorMessage">Erro ao salvar a ficha. Por favor, tente novamente.</div>
+
+        <div id="characterSheet"></div>
     </div>
 
-
-    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
-    <script src="script.js"></script>
     <script>
-        const firebaseConfig = {
-        apiKey: "AIzaSyAxH5o_IV9WZn72FyYUeyM4JbF4ls4cvqw",
-        authDomain: "ficha-teste-ad5fa.firebaseapp.com",
-        projectId: "ficha-teste-ad5fa",
-        storageBucket: "ficha-teste-ad5fa.appspot.com",
-        messagingSenderId: "890260354540",
-        appId: "1:890260354540:web:7b64a2205de5a347fc3cc9"
-      };
-  
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
+        // Função para tratar o upload de imagem do personagem
+        document.getElementById('picture__input').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const imgElement = document.createElement('img');
+                imgElement.src = e.target.result;
+                document.querySelector('.picture__image').innerHTML = '';
+                document.querySelector('.picture__image').appendChild(imgElement);
+            };
+            reader.readAsDataURL(file);
+        });
+
+        // Função para rolar dados
+        function rollDice() {
+            const result = Math.floor(Math.random() * 20) + 1;
+            document.getElementById('diceResult').textContent = `Resultado: ${result}`;
+        }
+
+        // Função para salvar a ficha do personagem
+        document.getElementById('characterForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const form = event.target;
+            const data = new FormData(form);
+
+            fetch('https://seu-servidor-api.com/save', {
+                method: 'POST',
+                body: data
+            })
+            .then(response => response.json())
+            .then(result => {
+                if (result.success) {
+                    document.getElementById('successMessage').style.display = 'block';
+                    document.getElementById('errorMessage').style.display = 'none';
+                    document.getElementById('characterSheet').textContent = JSON.stringify(result.data, null, 2);
+                } else {
+                    document.getElementById('successMessage').style.display = 'none';
+                    document.getElementById('errorMessage').style.display = 'block';
+                }
+            })
+            .catch(error => {
+                document.getElementById('successMessage').style.display = 'none';
+                document.getElementById('errorMessage').style.display = 'block';
+            });
+        });
     </script>
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js"></script>
+   </script>
 </body>
 </html>
 
+  
+     
 
 
 
