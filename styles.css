@@ -8,10 +8,10 @@ body {
 
 .container {
     max-width: 960px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
     background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
 
@@ -30,7 +30,6 @@ input[type="text"],
 input[type="number"],
 select,
 button {
-    display: block;
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
@@ -39,6 +38,7 @@ button {
     color: #333;
     border-radius: 4px;
     font-size: 16px;
+    box-sizing: border-box;
 }
 
 button {
@@ -53,17 +53,18 @@ button:hover {
     background-color: #0056b3;
 }
 
-#successMessage, #errorMessage {
+#successMessage,
+#errorMessage {
     text-align: center;
     margin-top: 10px;
     font-weight: bold;
 }
 
-#error {
+#errorMessage {
     color: red;
 }
 
-#success {
+#successMessage {
     color: green;
 }
 
@@ -99,8 +100,9 @@ button:hover {
 }
 
 .picture {
-    width: 960px;
-    height: 1568px;
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
     background: #222 url('steampunk_background.jpg') no-repeat center;
     background-size: cover;
     display: flex;
@@ -114,23 +116,20 @@ button:hover {
     outline: none;
     overflow: hidden;
     border-radius: 10px;
+    margin: 20px auto;
 }
 
-.picture:hover {
+.picture:hover,
+.picture:focus {
     color: #777;
     background: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .picture:active {
     border-color: #e1b382;
     color: #e1b382;
     background: #444;
-}
-
-.picture:focus {
-    color: #777;
-    background: #333;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .picture__img {
@@ -146,4 +145,34 @@ button:hover {
 
 .fade-in.active {
     opacity: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select,
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .picture {
+        width: 100%;
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .picture {
+        height: 200px;
+    }
 }
